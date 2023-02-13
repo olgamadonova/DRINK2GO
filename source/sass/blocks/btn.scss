@@ -1,0 +1,134 @@
+.btn {
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.btn--accent {
+  color: $color-text-secondary;
+  background: $color-accent;
+}
+
+.btn--basket {
+  position: relative;
+  padding: 0.8rem 2rem 0.8rem 4rem;
+}
+
+.btn--basket::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 12%;
+  width: 2rem;
+  height: 1.6rem;
+  background: url("../../img/decorative-images/basket.svg") center/contain;
+  transform: translateY(-58%);
+}
+
+.btn--basket:hover,
+.btn:hover {
+  background: $color-btn-hover;
+}
+
+.btn--basket:active,
+.btn--basket:focus,
+.btn:active,
+.btn:focus {
+  background: $color-btn-active;
+  outline: none;
+}
+
+.btn--basket:disabled,
+.btn:disabled {
+  background: $color-btn-disabled;
+}
+
+.btn--default {
+  color: $color-accent;
+  background: $color-text-secondary;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  padding: 0.8rem;
+  min-width: 4rem;
+}
+
+.btn--default-current {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: $color-text-base;
+}
+
+.btn--filter {
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+.btn--reset {
+  padding: 1rem 1.7rem;
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+.btn--reset:focus,
+.btn--reset:hover {
+  color: $color-text-secondary;
+}
+
+.btn--reset:disabled {
+  background-color: $color-btn-disabled;
+}
+
+.btn--pagination {
+  min-width: 4rem;
+  position: relative;
+  font-size: 0;
+  height: 4rem;
+}
+
+.btn--pagination::before {
+  position: absolute;
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  top: 40%;
+  left: 50%;
+  border: 2px solid $color-accent;
+  transform: translateX(-50%);
+}
+
+.btn--backward::before {
+  border-right: transparent;
+  border-bottom: transparent;
+  transform: rotate(-45deg);
+}
+
+.btn--forward::before {
+  border-left: transparent;
+  border-top: transparent;
+  transform: rotate(-45deg);
+}
+
+@media all  and (min-width: $tablet-width) {
+  .btn__availability-span {
+    display: none;
+  }
+
+  .btn--pagination {
+    font-size: 1.4rem;
+    padding: 0.8rem 2rem;
+  }
+
+  .btn--pagination::before {
+    display: none;
+  }
+}

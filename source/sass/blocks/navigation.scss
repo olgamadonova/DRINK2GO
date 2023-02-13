@@ -1,0 +1,138 @@
+.nav {
+  position: absolute;
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  transition: all 500ms ease-in;
+  transform: translateY(-200%);
+}
+
+.nav.nav--no-js {
+  position: static;
+  transform: translateY(0);
+}
+
+.nav.nav--js-open {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 6rem;
+  z-index: 100;
+  background-color: $color-bg-one;
+  transform: translateY(0);
+}
+
+.nav__main-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.nav__main-list-item:not(:last-child) {
+  margin-right: 0;
+}
+
+.nav__main-list-item {
+  max-width: 100%;
+  text-align: center;
+}
+
+.nav__main-list-link {
+  position: relative;
+  display: block;
+  padding: 2rem 0;
+  text-decoration: none;
+  color: $color-text-base;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  transition: all 350ms ease-in;
+}
+
+.nav__main-list-link::after {
+  position: absolute;
+  content: "";
+  height: 0.2rem;
+  bottom: 0;
+  left: -100%;
+  right: -200%;
+  background-color: $color-socials-focus;
+  transition: all 350ms ease-in;
+}
+
+.nav__main-list-link:active::after {
+  position: absolute;
+  content: "";
+  height: 6rem;
+  bottom: 0;
+  left: -100%;
+  right: -200%;
+  background-color: $color-socials-focus;
+  z-index: -1;
+}
+
+.nav__main-list-link--active::before {
+  position: absolute;
+  content: "";
+  height: 0.2rem;
+  top: 0;
+  left: -100%;
+  right: -200%;
+  background-color: $color-socials-focus;
+}
+
+.nav__main-list-link:hover,
+.nav__main-list-link:focus {
+  color: $color-btn-hover;
+}
+
+.nav__main-list-link:active {
+  color: $color-text-base;
+}
+
+@media all  and (min-width: $tablet-width) {
+  .nav {
+    position: static;
+    transform: translateY(0);
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+
+  .nav__main-list {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .nav__main-list-link {
+    padding: 3.2rem 2rem;
+  }
+
+  .nav__main-list-link::after {
+    display: none;
+  }
+
+  .nav__main-list-link--active::before {
+    display: none;
+  }
+
+  .nav__main-list-link:active {
+    background-color: $color-socials-focus;
+    color: $color-btn-hover;
+  }
+
+  .nav__main-list-item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .nav__main-list-link--active {
+    color: $color-accent;
+    border-bottom: 0.2rem solid $color-accent;
+  }
+}
+
+@media all  and (min-width: $desktop-width) {
+  .nav__main-list-item:not(:last-child) {
+    margin-right: 2rem;
+  }
+}

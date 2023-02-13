@@ -1,0 +1,126 @@
+.features {
+  padding: 5rem 0 6rem 0;
+}
+
+.features__container {
+  text-align: center;
+}
+
+.features__title {
+  margin: 0 0 3.6rem 0;
+}
+
+.features__list-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 5.2rem;
+  height: 5.6rem;
+  transform: translateX(-50%);
+}
+
+.features__list-item--one::before {
+  background: url("../../img/decorative-images/feature-one.svg") center/contain no-repeat;
+}
+
+.features__list-item--two::before {
+  background: url("../../img/decorative-images/feature-two.svg") center/contain no-repeat;
+}
+
+.features__list-item--three::before {
+  background: url("../../img/decorative-images/feature-three.svg") center/contain no-repeat;
+}
+
+.features__list-item--four::before {
+  background: url("../../img/decorative-images/feature-four.svg") center/contain no-repeat;
+}
+
+.features__list-item {
+  position: relative;
+  padding-top: 7rem;
+}
+
+.features__list-item:not(:last-child) {
+  margin-bottom: 3.2rem;
+}
+
+.features__list-item-title,
+.features__list-item-description {
+  margin: 0;
+}
+
+.features__list-item-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+@media all  and (min-width: $tablet-width) {
+  .features {
+    padding: 0 0 10rem 0;
+  }
+
+  .features__title {
+    margin: 0 0 6rem 0;
+  }
+
+  .features__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 5rem;
+  }
+
+  .features__list-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .features__list-item {
+    padding: 0 0 0 8rem;
+  }
+
+  .features__list-item::before {
+    top: 0;
+    left: 3rem;
+    margin: 0 2rem 0 0;
+  }
+
+  .features__list-item-title {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  .features__list-item-description {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+
+@media all  and (min-width: $desktop-width) {
+  .features {
+    padding: 10rem 0 12rem 0;
+    margin-bottom: 5.5rem;
+  }
+
+  .features__title {
+    margin: 0 0 8rem 0;
+  }
+
+  .features__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .features__list-item {
+    padding: 8rem 0 0 0;
+  }
+
+  .features__list-item::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

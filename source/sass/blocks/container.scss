@@ -1,0 +1,34 @@
+.container {
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media all  and (min-width: $tablet-width) {
+  .container {
+    max-width: $tablet-width;
+    padding: 0 2rem;
+  }
+}
+
+@media all  and (min-width: 991px) {
+  .container {
+    max-width: 991px;
+    padding: 0 2rem;
+  }
+}
+
+@media all  and (min-width: 1199px) {
+  .container {
+    max-width: 1199px;
+    padding: 0 4rem;
+  }
+}
+
+@media all  and (min-width: $desktop-width) {
+  .container {
+    max-width: $desktop-width;
+    padding: 0 4rem;
+  }
+}

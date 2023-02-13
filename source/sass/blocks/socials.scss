@@ -1,0 +1,35 @@
+.socials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+}
+
+.socials__link {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+.socials__icon {
+  fill: $color-socials-default;
+  margin: auto;
+}
+
+.socials__link:hover .socials__icon {
+  fill: $color-accent;
+}
+
+.socials__link:focus {
+  background: $color-socials-focus;
+  outline: none;
+}
+
+.socials__link:focus .socials__icon {
+  fill: $color-accent;
+}
+
+.socials__link:active {
+  background: rgba($color-accent, 0.25);
+}

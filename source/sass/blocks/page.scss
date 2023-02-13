@@ -1,0 +1,26 @@
+.page {
+  height: 100%;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+.page__body {
+  position: relative;
+  min-height: 100vh;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  font-style: normal;
+  color: $color-text-base;
+  overflow-x: hidden;
+  background: $color-bg-one;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.page__main {
+  flex-grow: 1;
+}

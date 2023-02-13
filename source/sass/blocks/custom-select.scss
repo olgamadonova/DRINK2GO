@@ -1,0 +1,97 @@
+.custom-select {
+  position: relative;
+}
+
+.custom-select__dropdown {
+  position: relative;
+  display: block;
+  min-width: 16.5rem;
+  text-align: left;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: $color-accent;
+  border: none;
+  padding: 0.4rem 3rem 0.4rem 1rem;
+  cursor: pointer;
+  transition: all 350ms ease-in;
+  outline: none;
+  background-color: transparent;
+  border-radius: 0.4rem;
+  appearance: none;
+}
+
+.custom-select__dropdown:hover,
+.custom-select__dropdown:focus {
+  background-color: #f0ebff;
+  font-weight: 400;
+}
+
+.custom-select__dropdown::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 0.2rem solid rgba(120, 89, 207, 1);
+  border-bottom: 0.2rem solid rgba(120, 89, 207, 1);
+  right: 1rem;
+  top: 45%;
+  transform: translateY(-50%) rotate(45deg);
+  pointer-events: none;
+  transition: all 350ms;
+}
+
+.custom-select__dropdown:active::after {
+  transform: rotate(225deg);
+}
+
+.custom-select__dropdown--active::after {
+  transform: rotate(225deg);
+}
+
+.custom-select__dropdown-list {
+  left: 0;
+  top: 3.2rem;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  box-shadow: 0 5px 1.5rem rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  border-radius: 0.4rem;
+  display: none;
+}
+
+.custom-select__dropdown-list--visible {
+  display: block;
+}
+
+.custom-select__dropdown-item {
+  margin: 0;
+  color: $color-text-base;
+  width: 190px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $color-text-secondary;
+  padding: 0.8rem 2rem;
+  border-bottom: 0.1rem solid $color-socials-focus;
+  cursor: pointer;
+  transition: all 350ms;
+}
+
+.custom-select__dropdown-item:hover,
+.custom-select__dropdown-item:focus {
+  background-color: $color-socials-focus;
+}
+
+.custom-select__dropdown-item:active {
+  color: $color-text-secondary;
+  background-color: $color-accent;
+}
+
+.custom-select__input {
+  display: none;
+}

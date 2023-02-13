@@ -1,0 +1,15 @@
+.products-pagination {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  column-gap: 2rem;
+}
+
+@media all  and (min-width: $tablet-width) {
+  .products-pagination {
+    grid-column: 1/-1;
+    grid-template-columns: repeat(5, min-content);
+    column-gap: 2rem;
+    justify-content: end;
+  }
+}

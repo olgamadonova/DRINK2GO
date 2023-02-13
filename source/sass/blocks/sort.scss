@@ -1,0 +1,28 @@
+.sort {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  align-items: center;
+  column-gap: 0.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.sort__title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media all  and (min-width: $tablet-width) {
+  .sort {
+    justify-content: right;
+  }
+}
+
+@media all  and (min-width: $desktop-width) {
+  .sort {
+    grid-column: 2/3;
+    justify-self: end;
+    margin-bottom: 2.6rem;
+  }
+}

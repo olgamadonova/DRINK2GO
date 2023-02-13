@@ -1,0 +1,392 @@
+.filter__block {
+  margin-bottom: 2.5rem;
+}
+
+.filter__title {
+  margin: 1.2rem 0 1.8rem 0;
+}
+
+.filter__btn {
+  margin: 1rem auto 2.5rem auto;
+  min-width: 16rem;
+}
+
+.filter__btn-reset {
+  margin: 0 auto 3.6rem auto;
+  background-color: $color-text-secondary;
+  min-width: 16rem;
+}
+
+.filter__label {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.filter__label:not(:last-child) {
+  margin-bottom: 2.2rem;
+}
+
+.filter__checkbox-title,
+.filter__radio-title {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.filter__radio-label-custom {
+  position: relative;
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 0.2rem solid $color-socials-default;
+  border-radius: 50%;
+  transition: all 350ms ease-in;
+}
+
+.filter__radio-label-custom::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  transition: all 350ms ease-in;
+}
+
+.filter__radio-choice:checked + .filter__radio-label-custom::before {
+  display: block;
+  background-color: $color-accent;
+}
+
+.filter__radio-choice:checked + .filter__radio-label-custom {
+  border-color: $color-accent;
+}
+
+.filter__radio-choice:disabled + .filter__radio-label-custom::before {
+  display: block;
+  background-color: $color-text-secondary;
+}
+
+.filter__radio-choice:disabled + .filter__radio-label-custom {
+  border-color: $color-btn-disabled;
+}
+
+.filter__radio-choice:disabled:checked + .filter__radio-label-custom::before {
+  display: block;
+  background-color: $color-btn-disabled;
+}
+
+.filter__radio-choice:disabled:checked + .filter__radio-label-custom {
+  border-color: $color-btn-disabled;
+}
+
+.filter__radio-choice:hover + .filter__radio-label-custom::before,
+.filter__radio-choice:focus + .filter__radio-label-custom::before {
+  display: block;
+  background-color: #ddd5f3;
+}
+
+.filter__radio-choice:hover + .filter__radio-label-custom,
+.filter__radio-choice:focus + .filter__radio-label-custom {
+  border-color: $color-btn-hover;
+}
+
+.filter__checkbox-label-custom {
+  position: relative;
+  display: inline-block;
+  width: 4.2rem;
+  height: 2.4rem;
+  border: 0.2rem solid $color-socials-default;
+  border-radius: 1.2rem;
+  transition: all 350ms ease-in;
+  background-color: #bdbdbd;
+}
+
+.filter__checkbox-label-custom::before {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background-color: $color-text-secondary;
+  transition: all 350ms ease-in;
+}
+
+
+.filter__checkbox-choice:disabled + .filter__checkbox-label-custom::before {
+  background-color: #f8f8f8;
+}
+
+.filter__checkbox-choice:disabled + .filter__checkbox-label-custom {
+  border-color: $color-btn-disabled;
+  background-color: $color-btn-disabled;
+}
+
+.filter__checkbox-choice:disabled:checked + .filter__checkbox-label-custom::before {
+  background-color: #bdbdbd;
+}
+
+.filter__checkbox-choice:disabled:checked + .filter__checkbox-label-custom {
+  border-color: $color-btn-disabled;
+  background-color: $color-btn-disabled;
+}
+
+.filter__checkbox-choice:hover + .filter__checkbox-label-custom,
+.filter__checkbox-choice:focus + .filter__checkbox-label-custom {
+  border-color: $color-btn-hover;
+  background-color: #ddd5f3;
+}
+
+.filter__checkbox-choice:checked + .filter__checkbox-label-custom::before {
+  left: 45%;
+}
+
+.filter__checkbox-choice:checked + .filter__checkbox-label-custom {
+  background-color: $color-accent;
+  border-color: $color-accent;
+}
+
+.filter__select {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: $color-accent;
+  border: none;
+  padding: 0.6rem 0.1rem;
+  cursor: pointer;
+  transition: all 350ms ease-in;
+  outline: none;
+  background-color: transparent;
+  border-radius: 0.4rem;
+  appearance: none;
+}
+
+.filter__select-label {
+  display: block;
+  position: relative;
+}
+
+.filter__select-label::after {
+  position: absolute;
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  border-right: 0.2rem solid $color-accent;
+  border-bottom: 0.2rem solid $color-accent;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-70%) rotate(45deg);
+}
+
+.filter__select:hover,
+.filter__select:focus {
+  background-color: $color-socials-focus;
+}
+
+.filter__range-input {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  width: 11.8rem;
+  padding: 0.7rem 1rem;
+  border: 0.2rem solid $color-accent;
+  border-radius: 0.4rem;
+  outline: none;
+  appearance: textfield;
+  text-align: center;
+}
+
+.filter__range-input--min {
+  margin-right: 0.5rem;
+}
+
+.filter__range-span {
+  margin-right: 0.5rem;
+}
+
+.filter__range-input::-webkit-outer-spin-button,
+.filter__range-input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.filter__range-input::placeholder,
+.filter__range-span {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #bdbdbd;
+}
+
+.filter__range-input:focus {
+  border: 0.2rem solid $color-btn-active;
+}
+
+.filter__range-input:disabled {
+  border: 0.2rem solid $color-btn-disabled;
+}
+
+.filter__range-scale {
+  position: relative;
+  height: 0.4rem;
+  background-color: $color-btn-disabled;
+  margin-bottom: 4.5rem;
+  cursor: pointer;
+}
+
+.filter__range-bar {
+  position: absolute;
+  height: 0.4rem;
+  background-color: $color-accent;
+  left: 0;
+  right: 10%;
+  transition: all 350ms ease-in;
+  cursor: pointer;
+}
+
+.filter__range-toggle {
+  position: absolute;
+  border: 0.2rem solid $color-btn-hover;
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  outline: none;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $color-text-secondary;
+  transition: all 350ms ease-in;
+  cursor: pointer;
+}
+
+.filter__range-toggle::before {
+  position: absolute;
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: inherit;
+  transition: all 350ms ease-in;
+}
+
+.filter__range-toggle-min {
+  left: 0;
+}
+
+.filter__range-toggle-max {
+  right: 0;
+}
+
+.filter__range-scale:disabled .filter__range-toggle {
+  border-color: $color-btn-disabled;
+}
+
+.filter__range-scale:disabled .filter__range-toggle::before {
+  background-color: $color-text-secondary;
+}
+
+.filter__range-scale:disabled {
+  background-color: $color-btn-disabled;
+}
+
+.filter__range-scale:hover .filter__range-toggle::before,
+.filter__range-scale:focus .filter__range-toggle::before {
+  background-color: $color-btn-hover;
+  opacity: 0.25;
+}
+
+.filter__range-scale:active .filter__range-toggle::before {
+  background-color: $color-accent;
+  opacity: 1;
+}
+
+@media all  and (min-width: $tablet-width) {
+  .filter {
+    padding-bottom: 2.5rem;
+  }
+
+  .filter__form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.8rem;
+    row-gap: 1rem;
+    grid-template-rows: repeat(3, min-content);
+  }
+
+  .filter__range-scale {
+    margin-bottom: 4.2rem;
+  }
+
+  .filter__range-input {
+    width: 9.2rem;
+  }
+
+  .filter__range-input--min {
+    margin-right: 1rem;
+  }
+
+  .filter__range-span {
+    margin-right: 1rem;
+  }
+
+  .filter__btn-block {
+    justify-self: center;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: min-content min-content;
+    column-gap: 3rem;
+  }
+
+  .filter__btn,
+  .filter__btn-reset {
+    margin: 0;
+    padding: 0.8rem 0.4rem;
+  }
+}
+
+@media all  and (min-width: $desktop-width) {
+  .filter {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+
+  .filter__form {
+    display: grid;
+    grid-template-columns: min-content;
+    column-gap: 0;
+    row-gap: 2rem;
+    grid-template-rows: repeat(3, min-content);
+  }
+
+  .filter__block {
+    margin-bottom: 0;
+  }
+
+  .filter__btn-block {
+    margin-top: 1rem;
+  }
+
+  .filter__range-input {
+    width: 13.4rem;
+  }
+
+  .filter__range-input--min {
+    margin-right: 2rem;
+  }
+
+  .filter__range-span {
+    margin-right: 2rem;
+  }
+}
